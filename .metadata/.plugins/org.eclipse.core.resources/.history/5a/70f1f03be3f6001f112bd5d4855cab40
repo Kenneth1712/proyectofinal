@@ -1,0 +1,25 @@
+package modelo;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "administrador")
+public class modeloAdmin{
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "idAdm", nullable = false, unique = true)
+    private Long idAdm;
+
+    @Column(name = "nombreUsuario", length = 50, nullable = false)
+    private String nombreUsuario;
+
+    @Column(name = "usuarioAdm", length = 50, nullable = false, unique = true)
+    private String usuarioAdm;
+
+    @Column(name = "contraseñaAdm", length = 255, nullable = false)
+    private String contraseñaAdm;
+
+    // Getters y Setters
+}
+

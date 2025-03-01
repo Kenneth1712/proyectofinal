@@ -1,0 +1,20 @@
+package com.example.demo.repositorio;
+
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.modelo.nomina;
+
+public interface nomina_repositorio extends JpaRepository<nomina, Long>{
+public List<nomina>findByDeducidos(long deducidos);
+public List<nomina>findByFecha(String fecha);
+public List<nomina>findByingresos(long ingresos);
+public List <nomina>findBySalario(long salario);
+public List<nomina>findByTotalsalario(long totalsalario);
+List <nomina>findById(long identifacion);
+
+	
+	
+}

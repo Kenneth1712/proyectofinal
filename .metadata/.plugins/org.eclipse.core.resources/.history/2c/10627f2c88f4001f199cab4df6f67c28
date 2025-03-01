@@ -1,0 +1,27 @@
+package com.example.demo.repositorio;
+
+
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.example.demo.modelo.nomina;
+
+public interface nomina_repositorio extends JpaRepository<nomina, Long>{
+public List<nomina>findByDeducidos(long deducidos);
+public List<nomina>findByFecha(Date fecha);
+public List<nomina>findByingresos(long ingresos);
+public List <nomina>findBySalario(long salario);
+public List<nomina>findByTotalsalario(long totalsalario);
+List <nomina>findById(long identifacion);
+
+	
+@Query("SELECT MONTH(n.fecha) AS mes, SUM(n.totalsalario) AS total " +
+	       "FROM nomina n " +
+	       "WHERE YEAR(n.fecha) = :año " +
+	       "GROUP BY MONTH(n.fecha)")
+	List<Object[]> obtenerTotalNominaPorAño(@Param("año") int año);
+}
