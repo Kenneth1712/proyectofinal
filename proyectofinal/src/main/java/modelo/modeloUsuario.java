@@ -9,10 +9,6 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "usuario")
-
-
-
-
 public class modeloUsuario {
 	
 	@Id

@@ -38,5 +38,69 @@ public class modeloAlquiler {
     @Column(name = "actividadAlquiler", length = 50, nullable = false)
     private String actividadAlquiler;
 
-    // Getters y Setters
+	public Long getIdAlquiler() {
+		return idAlquiler;
+	}
+
+	public void setIdAlquiler(Long idAlquiler) {
+		this.idAlquiler = idAlquiler;
+	}
+
+	public modeloUsuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(modeloUsuario usuario) {
+		this.usuario = usuario;
+	}
+
+	public modeloVehiculos getVehiculo() {
+		return vehiculo;
+	}
+
+	public void setVehiculo(modeloVehiculos vehiculo) {
+		this.vehiculo = vehiculo;
+	}
+
+	public Date getFechaInicio() {
+		return fechaInicio;
+	}
+
+	public void setFechaInicio(Date fechaInicio) {
+		this.fechaInicio = fechaInicio;
+	}
+
+	public Date getFechaFin() {
+		return fechaFin;
+	}
+
+	public void setFechaFin(Date fechaFin) {
+		this.fechaFin = fechaFin;
+	}
+
+	public String getEstadoAlquiler() {
+		return estadoAlquiler;
+	}
+
+	public void setEstadoAlquiler(String estadoAlquiler) {
+		this.estadoAlquiler = estadoAlquiler;
+	}
+
+	public String getVerificar() {
+		return verificar;
+	}
+
+	public void setVerificar(String verificar) {
+		this.verificar = verificar;
+	}
+
+	public String getActividadAlquiler() {
+		return actividadAlquiler;
+	}
+
+	public void setActividadAlquiler(String actividadAlquiler) {
+		this.actividadAlquiler = actividadAlquiler;
+	}
+
+  
 }
