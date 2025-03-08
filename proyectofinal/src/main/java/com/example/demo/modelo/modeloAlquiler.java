@@ -1,12 +1,13 @@
-package modelo;
+package com.example.demo.modelo;
+import jakarta.persistence.Column;
 
 import jakarta.persistence.*;
 import java.util.Date;
-import modelo.modeloUsuario;
+
 
 @Entity
 @Table(name = "alquiler")
-public class modeloAlquiler {
+public class modeloAlquiler{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,6 +38,23 @@ public class modeloAlquiler {
 
     @Column(name = "actividadAlquiler", length = 50, nullable = false)
     private String actividadAlquiler;
+    
+
+	public modeloAlquiler() {
+		super();
+		
+	}
+	public modeloAlquiler(long idAlquiler, Long idUsuario,Long idVehiculo, Date fechaInicio,Date fechaFin,String estadoAlquiler,String verificar, String actividadAlquiler) {
+		super();
+		this.idAlquiler=idAlquiler;
+		
+		this.fechaInicio= fechaInicio;
+		this.fechaFin=fechaFin;
+		this.estadoAlquiler=estadoAlquiler;
+		this.verificar=verificar;
+		this.actividadAlquiler=actividadAlquiler;
+		
+	}
 
 	public Long getIdAlquiler() {
 		return idAlquiler;
@@ -104,3 +122,4 @@ public class modeloAlquiler {
 
   
 }
+
