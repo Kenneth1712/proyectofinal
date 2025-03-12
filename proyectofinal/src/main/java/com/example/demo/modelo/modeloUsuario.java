@@ -3,7 +3,7 @@ import jakarta.persistence.Column;
 import java.util.Date;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
+import jakarta.persistence.Entity; 
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -33,8 +33,8 @@ public class modeloUsuario {
 	    @Column(name = "vigencia", nullable = false)
 	    private String vigencia;
 
-	    @Column(name = "contraseña", length = 255, nullable = false)
-	    private String contraseña;
+	    @Column(name = "password", length = 255, nullable = false)
+	    private String password;
 
 	    @Column(name = "numeroTel", length = 20, nullable = false)
 	    private long numeroTel;
@@ -43,7 +43,7 @@ public class modeloUsuario {
 			super();
 			// TODO Auto-generated constructor stub
 		}
-		public modeloUsuario ( Long idUsuario, String nombre, Date fechaExpedicion, String categoria, String correoElectronico, String vigencia, String contraseña,Long numeroTel, 
+		public modeloUsuario ( Long idUsuario, String nombre, Date fechaExpedicion, String categoria, String correoElectronico, String vigencia, String password,Long numeroTel, 
 				modeloAlquiler alquiler) {
 			super();
 			this.idUsuario = idUsuario;
@@ -52,7 +52,7 @@ public class modeloUsuario {
 			this.categoria = categoria;
 			this.correoElectronico = correoElectronico;
 			this.vigencia = vigencia;
-			this.contraseña = contraseña;
+			this.password = password;
 			this.numeroTel = numeroTel;
 
 		}
@@ -107,12 +107,12 @@ public class modeloUsuario {
 			this.vigencia = vigencia;
 		}
 
-		public String getContraseña() {
-			return contraseña;
+		public String getPassword() {
+			return password;
 		}
 
-		public void setContraseña(String contraseña) {
-			this.contraseña = contraseña;
+		public void setPassword(String password) {
+			this.password = password;
 		}
 
 		public long getNumeroTel() {
@@ -125,5 +125,4 @@ public class modeloUsuario {
 		
 		
 		
-
 }
