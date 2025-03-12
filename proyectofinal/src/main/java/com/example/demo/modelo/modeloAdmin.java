@@ -16,15 +16,15 @@ public class modeloAdmin{
     @Column(name = "usuarioAdmin", length = 50, nullable = false, unique = true)
     private String usuarioAdmin;
 
-    @Column(name = "contraseñaAdm", length = 255, nullable = false)
-    private String contraseñaAdm;
+    @Column(name = "passwordAdm", length = 255, nullable = false)
+    private String passwordAdm;
 
-	public modeloAdmin(Long idAdmin,String usuarioAdmin,String contraseñaAdm) {
+	public modeloAdmin(Long idAdmin,String usuarioAdmin,String passwordAdm) {
 		super();
 		// TODO Auto-generated constructor stub
 		this.idAdmin = idAdmin;
 		this.usuarioAdmin = usuarioAdmin;
-		this.contraseñaAdm=contraseñaAdm;
+		this.passwordAdm=passwordAdm;
 	}
 
 	public Long getIdAdmin() {
@@ -43,16 +43,13 @@ public class modeloAdmin{
 		this.usuarioAdmin = usuarioAdmin;
 	}
 
-	public String getContraseñaAdm() {
-		return contraseñaAdm;
+	public String getPasswordAdm() {
+		return passwordAdm;
 	}
 
-	public void setContraseñaAdm(String contraseñaAdm) {
-		this.contraseñaAdm = contraseñaAdm;
+	public void setPasswordAdm(String passwordAdm) {
+		this.passwordAdm = passwordAdm;
 	}
 
    
 }
-
-
-
