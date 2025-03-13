@@ -1,0 +1,49 @@
+<!-- Botón para abrir el modal -->
+<div class="container mt-5">
+  <h2>Registro de Usuario</h2>
+  <form (ngSubmit)="registrarUsuario()">
+    
+    <div class="mb-3">
+      <label for="idUsuario" class="form-label">Identificación</label>
+      <input type="text" class="form-control" id="idUsuario" [(ngModel)]="usuario.idUsuario" name="idUsuario" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="fechaExpedicion" class="form-label">Fecha Expedición Licencia</label>
+      <input type="date" class="form-control" id="fechaExpedicion" [(ngModel)]="usuario.fechaExpedicion" name="fechaExpedicion" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="categoria" class="form-label">Categoría</label>
+      <input type="text" class="form-control" id="categoria" [(ngModel)]="usuario.categoria" name="categoria" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="correoElectronico" class="form-label">Correo Electrónico</label>
+      <input type="email" class="form-control" id="correoElectronico" [(ngModel)]="usuario.correoElectronico" name="correoElectronico" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="vigencia" class="form-label">Vigencia Licencia</label>
+      <input type="date" class="form-control" id="vigencia" [(ngModel)]="usuario.vigencia" name="vigencia" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Contraseña</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="usuario.password" name="password" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="numeroTel" class="form-label">Teléfono</label>
+      <input type="text" class="form-control" id="numeroTel" [(ngModel)]="usuario.numeroTel" name="numeroTel" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Registrarse</button>
+    <a href="/inicio-sesion" class="btn btn-link">Iniciar Sesion</a>
+  </form>
+</div>
