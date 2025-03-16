@@ -1,11 +1,19 @@
 package com.example.demo.repositorio;
 
-import java.util.List;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import com.example.demo.modelo.modeloAlquiler;
 import com.example.demo.modelo.modeloVehiculos;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+import java.util.List;
+import java.util.Optional;
 
+@Repository
 public interface repositorioVehiculo extends JpaRepository<modeloVehiculos, Long> {
-	   List<modeloVehiculos> findByTipo(String tipo);
+
+    @Query(value = "SELECT * FROM vehiculo v WHERE v.estado = :estado AND v.tipo = :tipo", nativeQuery = true)
+    List<modeloVehiculos> findByEstadoAndTipo(@Param("estado") String estado, @Param("tipo") String tipo);
+    
+ 
 }
