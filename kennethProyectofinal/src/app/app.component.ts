@@ -5,13 +5,16 @@ import { RegistroComponent } from './pagina/registro/registro.component';
 import { InicioSesionComponent } from "./pagina/inicio-sesion/inicio-sesion.component";
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [ RegistroComponent, HttpClientModule,FormsModule,CommonModule],  // Agrega HttpClientModule aquí
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   
