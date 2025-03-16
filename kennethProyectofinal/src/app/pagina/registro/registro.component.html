@@ -1,6 +1,8 @@
 <!-- Botón para abrir el modal -->
-<div class="container mt-5">
-  <h2>Registro de Usuario</h2>
+
+<div class="container mt-5" *ngIf="mostrar">
+  <h2>Registro de Usuario</h2> 
+
   <form (ngSubmit)="registrarUsuario()">
     
     <div class="mb-3">
@@ -44,6 +46,8 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Registrarse</button>
-    <a href="/inicio-sesion" class="btn btn-link">Iniciar Sesion</a>
+    <button   class="btn btn-link" (click)="sesion()">Iniciar Sesion</button>
   </form>
 </div>
+
+<router-outlet></router-outlet>

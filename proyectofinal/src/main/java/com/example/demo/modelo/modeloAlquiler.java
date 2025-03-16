@@ -40,10 +40,11 @@ public class modeloAlquiler{
     private String actividadAlquiler;
     
 
-	public modeloAlquiler() {
-		super();
-		
-	}
+    public modeloAlquiler() {
+        this.verificar = "false";
+        this.actividadAlquiler = "No especificada";
+    }
+
 	public modeloAlquiler(long idAlquiler, Long idUsuario,Long idVehiculo, Date fechaInicio,Date fechaFin,String estadoAlquiler,String verificar, String actividadAlquiler) {
 		super();
 		this.idAlquiler=idAlquiler;
