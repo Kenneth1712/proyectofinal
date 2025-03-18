@@ -4,6 +4,7 @@ import { InicioSesionComponent } from './pagina/inicio-sesion/inicio-sesion.comp
 import { NavComponent } from './nav/nav.component';
 import { VehiculosComponent } from './vehiculos/vehiculos.component';
 import { AlquilerComponent } from './alquiler/alquiler.component';
+import { CancelarAlquilerComponent } from './cancelaralquiler/cancelaralquiler.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: '/registro', pathMatch: 'full' }, // ruta por defecto
@@ -12,4 +13,5 @@ export const routes: Routes = [
   { path: 'nav', component: NavComponent },
   { path: 'vehiculos', component: VehiculosComponent },
   { path: 'alquiler', component:AlquilerComponent },
+  { path: 'cancelaralquiler', component: CancelarAlquilerComponent }
 ];

@@ -17,12 +17,12 @@ export class VehiculosComponent implements OnInit {
   tipo: string = 'automovil'; // Tipo por defecto
   vehiculos: Vehiculos[] = [];
   
-  // Paginación
+  
   paginaActual: number = 1;
   vehiculosPorPagina: number = 5;
   totalPaginas: number = 1;
 
-  // Inyectamos Router en el constructor
+ 
   constructor(
     private vehiculosService: VehiculosService,
     private router: Router

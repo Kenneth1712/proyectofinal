@@ -72,11 +72,16 @@ export class AlquilerComponent implements OnInit {
     doc.setFontSize(12);
     doc.text(`ID Usuario: ${this.alquiler.idUsuario}`, 20, 40);
     doc.text(`ID Vehículo: ${this.alquiler.idVehiculo}`, 20, 50);
+    doc.text(`Estado: Pendiente de entrega`, 20, 110);
     doc.text(`Fecha Inicio: ${this.alquiler.fechaInicio}`, 20, 60);
     doc.text(`Fecha Fin: ${this.alquiler.fechaFin}`, 20, 70);
+    
     doc.text('¡Gracias por su solicitud!', 20, 90);
     
     // Guarda y descarga el PDF con el nombre especificado.
     doc.save('solicitud-alquiler.pdf');
   }
 }
+
+
+

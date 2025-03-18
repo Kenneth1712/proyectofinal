@@ -21,4 +21,5 @@ public interface repositorioAlquiler extends JpaRepository<modeloAlquiler, Long>
     default List<modeloAlquiler> obtenerAlquileresPorUsuario(Long idUsuario) {
         return findByUsuario_IdUsuario(idUsuario);
     }
+ 
 }

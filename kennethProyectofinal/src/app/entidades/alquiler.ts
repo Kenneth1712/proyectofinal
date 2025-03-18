@@ -7,3 +7,4 @@ export class Alquiler {
         estadoAlquiler!: string;
         actividadAlquiler!: string;
       }
+      
