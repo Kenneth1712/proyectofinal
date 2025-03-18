@@ -1,3 +1,18 @@
+nav {
+    background: #2e6caf;
+    text-align: center;
+    padding: 15px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #f4b400;
+}
 div {
     max-width: 600px;
     margin: 20px auto;

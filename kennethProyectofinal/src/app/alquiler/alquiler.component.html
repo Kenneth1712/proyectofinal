@@ -1,28 +1,47 @@
+<nav>
+  <a href="/nav">Inicio</a>
+  <a href="/vehiculos">Ver Vehículos Disponibles</a>
+  <a href="/registro">Registro</a>
+  <a href="/inicio-sesion">Iniciar Sesión</a>
+  <a href="/cancelaralquiler">Cancelar Alquiler</a>
+  <a href="/registro">Cerrar</a>
+</nav>
+
 <div class="container mt-4">
-    <h2 class="text-center">Solicitud de Alquiler</h2>
-    <form (ngSubmit)="solicitarAlquiler()" class="p-4 border rounded shadow-sm bg-light">
-      
-      <div class="mb-3">
-        <label for="idUsuario" class="form-label">ID Usuario:</label>
-        <input type="text" id="idUsuario" class="form-control" [(ngModel)]="alquiler.idUsuario" name="idUsuario" required>
-      </div>
-      
-      <div class="mb-3">
-        <label for="idVehiculo" class="form-label">ID Vehículo:</label>
-        <input type="text" id="idVehiculo" class="form-control" [(ngModel)]="alquiler.idVehiculo" name="idVehiculo" readonly>
-      </div>
-      
-      <div class="mb-3">
-        <label for="fechaInicio" class="form-label">Fecha Inicio:</label>
-        <input type="date" id="fechaInicio" class="form-control" [(ngModel)]="alquiler.fechaInicio" name="fechaInicio" required>
-      </div>
-      
-      <div class="mb-3">
-        <label for="fechaFin" class="form-label">Fecha Fin:</label>
-        <input type="date" id="fechaFin" class="form-control" [(ngModel)]="alquiler.fechaFin" name="fechaFin" required>
-      </div>
-      
-      <button type="submit" class="btn btn-primary w-100">Solicitar Alquiler</button>
-    </form>
-  </div>
+  <h2 class="text-center">Solicitud de Alquiler</h2>
   
+  <form (ngSubmit)="solicitarAlquiler()" class="p-4 border rounded shadow-sm bg-light">
+    
+    <div class="mb-3">
+      <label for="idUsuario" class="form-label">ID Usuario:</label>
+      <input type="text" id="idUsuario" class="form-control" [(ngModel)]="alquiler.idUsuario" name="idUsuario" required>
+    </div>
+    
+    <div class="mb-3">
+      <label for="idVehiculo" class="form-label">ID Vehículo:</label>
+      <input type="text" id="idVehiculo" class="form-control" [(ngModel)]="alquiler.idVehiculo" name="idVehiculo" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="color" class="form-label">Color:</label>
+      <input type="text" id="color" class="form-control" [(ngModel)]="alquiler.color" name="color" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="valorAlquiler" class="form-label">Valor Alquiler:</label>
+      <input type="text" id="valorAlquiler" class="form-control" [(ngModel)]="alquiler.valor_alquiler" name="valor_alquiler" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="fechaInicio" class="form-label">Fecha Inicio:</label>
+      <input type="date" id="fechaInicio" class="form-control" [(ngModel)]="alquiler.fechaInicio" name="fechaInicio" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="fechaFin" class="form-label">Fecha Fin:</label>
+      <input type="date" id="fechaFin" class="form-control" [(ngModel)]="alquiler.fechaFin" name="fechaFin" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Solicitar Alquiler</button>
+  </form>
+</div>

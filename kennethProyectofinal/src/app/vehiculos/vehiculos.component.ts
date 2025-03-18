@@ -70,8 +70,12 @@ export class VehiculosComponent implements OnInit {
   
 // Función para navegar al componente de alquiler
 alquilar(vehiculo: Vehiculos): void {
-  // Se usa 'idVehiculo' según lo declarado en la entidad.
-  this.router.navigate(['/alquiler'], { queryParams: { idVehiculo: vehiculo.idVehiculo } });
+  this.router.navigate(['/alquiler'], { 
+    queryParams: { 
+      idVehiculo: vehiculo.idVehiculo, 
+      color: vehiculo.color, 
+      valor_alquiler: vehiculo.valor_alquiler 
+    }  });
 }
 
 
