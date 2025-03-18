@@ -145,6 +145,16 @@ public class controladorAlquiler {
         repositorioVehiculo.save(vehiculo);
         return ResponseEntity.ok(alquilerGuardado);
     }
+    @GetMapping("/mostrarAlquileres")
+    public ResponseEntity<List<modeloAlquiler>> mostrarAlquileres(@RequestParam Long idUsuario) {
+        List<modeloAlquiler> alquileres = repositorio.findByUsuario_IdUsuario(idUsuario);
+
+        if (alquileres.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(alquileres);
+    }
+
 }
 
 
