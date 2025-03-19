@@ -11,15 +11,30 @@
   <h2 class="text-center">Solicitud de Alquiler</h2>
   
   <form (ngSubmit)="solicitarAlquiler()" class="p-4 border rounded shadow-sm bg-light">
-    
+
     <div class="mb-3">
       <label for="idUsuario" class="form-label">ID Usuario:</label>
       <input type="text" id="idUsuario" class="form-control" [(ngModel)]="alquiler.idUsuario" name="idUsuario" required>
     </div>
     
     <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre:</label>
+      <input type="text" id="nombre" class="form-control" [(ngModel)]="alquiler.nombre" name="nombre" required>
+    </div>
+
+    <div class="mb-3">
       <label for="idVehiculo" class="form-label">ID Vehículo:</label>
       <input type="text" id="idVehiculo" class="form-control" [(ngModel)]="alquiler.idVehiculo" name="idVehiculo" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="placa" class="form-label">Placa:</label>
+      <input type="text" id="placa" class="form-control" [(ngModel)]="alquiler.placa" name="placa" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="tipo" class="form-label">Tipo de Vehículo:</label>
+      <input type="text" id="tipo" class="form-control" [(ngModel)]="alquiler.tipo" name="tipo" readonly>
     </div>
 
     <div class="mb-3">
@@ -28,17 +43,17 @@
     </div>
 
     <div class="mb-3">
-      <label for="valorAlquiler" class="form-label">Valor Alquiler:</label>
-      <input type="text" id="valorAlquiler" class="form-control" [(ngModel)]="alquiler.valor_alquiler" name="valor_alquiler" readonly>
+      <label for="valor_alquiler" class="form-label">Valor de Alquiler:</label>
+      <input type="text" id="valor_alquiler" class="form-control" [(ngModel)]="alquiler.valor_alquiler" name="valor_alquiler" readonly>
     </div>
 
     <div class="mb-3">
-      <label for="fechaInicio" class="form-label">Fecha Inicio:</label>
+      <label for="fechaInicio" class="form-label">Fecha de Inicio:</label>
       <input type="date" id="fechaInicio" class="form-control" [(ngModel)]="alquiler.fechaInicio" name="fechaInicio" required>
     </div>
 
     <div class="mb-3">
-      <label for="fechaFin" class="form-label">Fecha Fin:</label>
+      <label for="fechaFin" class="form-label">Fecha de Fin:</label>
       <input type="date" id="fechaFin" class="form-control" [(ngModel)]="alquiler.fechaFin" name="fechaFin" required>
     </div>
 
