@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router'; // Asegúrate de importarlo
+import { Router } from '@angular/router';
 import { VehiculosService } from '../servicio/vehiculos.service';
 import { Vehiculos } from '../entidades/vehiculos';
 import { FormsModule } from '@angular/forms';
@@ -14,15 +14,13 @@ import { CommonModule } from '@angular/common';
 })
 export class VehiculosComponent implements OnInit {
 
-  tipo: string = 'automovil'; // Tipo por defecto
+  tipo: string = 'automovil';
   vehiculos: Vehiculos[] = [];
-  
-  
+
   paginaActual: number = 1;
   vehiculosPorPagina: number = 5;
   totalPaginas: number = 1;
 
- 
   constructor(
     private vehiculosService: VehiculosService,
     private router: Router
@@ -40,7 +38,7 @@ export class VehiculosComponent implements OnInit {
         console.log('Datos recibidos:', data);
         this.vehiculos = data;
         this.totalPaginas = Math.ceil(this.vehiculos.length / this.vehiculosPorPagina);
-        this.paginaActual = 1; // Reiniciar paginación
+        this.paginaActual = 1; 
       },
       (error: any) => {
         console.error('Error al obtener los vehículos:', error);
@@ -61,22 +59,21 @@ export class VehiculosComponent implements OnInit {
     }
   }
 
-  // Obtener los vehículos de la página actual
   get vehiculosPaginados(): Vehiculos[] {
     const inicio = (this.paginaActual - 1) * this.vehiculosPorPagina;
     const fin = inicio + this.vehiculosPorPagina;
     return this.vehiculos.slice(inicio, fin);
   }
   
-// Función para navegar al componente de alquiler
-alquilar(vehiculo: Vehiculos): void {
-  this.router.navigate(['/alquiler'], { 
-    queryParams: { 
-      idVehiculo: vehiculo.idVehiculo, 
-      color: vehiculo.color, 
-      valor_alquiler: vehiculo.valor_alquiler 
-    }  });
-}
-
-
+  alquilar(vehiculo: Vehiculos): void {
+    this.router.navigate(['/alquiler'], { 
+      queryParams: { 
+        idVehiculo: vehiculo.idVehiculo, 
+        placa: vehiculo.placa, 
+        tipo: vehiculo.tipo, 
+        color: vehiculo.color, 
+        valor_alquiler: vehiculo.valor_alquiler 
+      } 
+    });
+  }
 }
