@@ -11,6 +11,7 @@ export const routes: Routes = [
   { path: 'registro', component: RegistroComponent },
   { path: 'inicio-sesion', component: InicioSesionComponent },
   { path: 'nav', component: NavComponent },
+  
   { path: 'vehiculos', component: VehiculosComponent },
   { path: 'alquiler', component:AlquilerComponent },
   { path: 'cancelaralquiler', component: CancelarAlquilerComponent }
